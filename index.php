@@ -65,7 +65,6 @@ require("./function.php")
     </div>
   </header>
   <!-- header-->
-
    <!-- avalible -->
    <section id="avalible">
     <div class="container-fluid pt-4 pb-4">
