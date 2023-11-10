@@ -98,7 +98,6 @@ require("./function.php")
     </div>
   </section>
 
-
   <!-- avalible -->
 
   <!-- unvalible -->
@@ -133,13 +132,9 @@ require("./function.php")
     </div>
       </div>
   </section>
-
   <!-- unvalible -->
-
   <i class="fa-solid fa-arrow-up"></i>
-
   <!-- reservation form -->
-
   <section id="reservation">
     <div class="container-fluid hero">
         <h1 class="text-center p-4 font-weight-bold">ZAREZERWUJ</h1>
@@ -237,7 +232,5 @@ require("./function.php")
     crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./js/myScript.js"></script>
-
 </body>
-
 </html>
