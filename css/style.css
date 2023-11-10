@@ -1,0 +1,340 @@
+*,
+::before,
+::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+html {
+	scroll-behavior: smooth;
+}
+
+.header {
+	height: 100vh;
+	background-image: url('../assets/header.jpeg');
+	background-position: center;
+	background-size: cover;
+}
+
+.header-btn {
+	background: transparent;
+	border: 2px solid white;
+	color: white;
+	padding: 5px;
+	font-size: 26px;
+	font-weight: bold;
+	transition: background-color 0.3s, color 0.3s;
+}
+.header-btn:hover {
+	background-color: rgba(255, 255, 255, 0.4);
+	color: rgba(0, 0, 0, 0.5);
+}
+.nav-link{
+    cursor: pointer;
+}
+.card-img-top {
+	height: 200px;
+}
+#reservation {
+	background-image: url('../assets/reservation1.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+#reservation h1 {
+	color: rgb(255, 255, 255);
+}
+#reservation label {
+	font-weight: bold;
+	font-size: 1.1rem;
+}
+.hero {
+	background-color: rgb(0, 0, 0, 0.3);
+}
+.footer {
+	border-top: 1px solid white;
+}
+.fa-arrow-up {
+	opacity: 0;
+	position: fixed;
+	right: 20px;
+	bottom: 60px;
+	z-index: 10;
+	outline: none;
+	background-color: transparent;
+	border: none;
+	font-size: 4rem;
+	cursor: pointer;
+	transition: opacity 0.4s, color 0.4s;
+}
+.fa-arrow-up:hover {
+	animation: shake 0.4s;
+}
+.navbar-toggler{
+    position: fixed;
+    margin-top: 50px;
+    background: black;
+    z-index: 11;
+} 
+.closeMenu {
+    display: block;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    animation: navClose 0.5s both;
+}
+.showMenu{
+    display: block;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    animation: navShow 0.5s both;
+    z-index: 11;
+}
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+@keyframes shake {
+	0% {
+		rotate: -10deg;
+	}
+	20% {
+		rotate: 10deg;
+	}
+	40% {
+		rotate: -10deg;
+	}
+	60% {
+		rotate: 10deg;
+	}
+	80% {
+		rotate: -10deg;
+	}
+	100% {
+		rotate: 0;
+	}
+}
+@keyframes underline {
+	from {
+		width: 0;
+	}
+	to {
+		width: 100%;
+	}
+}
+@keyframes navShow {
+	from {
+        transform: translateX(-100%);
+	}
+	to {
+		transform: translateX(0);
+	}
+}
+@keyframes navClose {
+	from {
+        transform: translateX(0);
+	}
+	to {
+		transform: translateX(-100%);
+	}
+}
+
+@media (min-width: 1200px)
+{
+    .navbar {
+        position: fixed;
+        background: transparent;
+        padding: 0 30px 0 30px;
+        transition: background 0.3s;
+        z-index: 11;
+    }
+    .navbar::after {
+        position: absolute;
+        bottom: 10px;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background-color: white;
+        margin: 0 20px;
+        content: '';
+    }
+    .header button:nth-child(odd) {
+        margin-right: 50px;
+    }
+    .nav-link {
+        position: relative;
+        font-size: 1.4rem;
+        transition: color 0.3s, border;
+    }
+    .active-menu {
+        color: gold !important;
+    }
+    .active-menu::before {
+        position: absolute;
+        content: '';
+        height: 1px;
+        background-color: black;
+        bottom: 0;
+        left: 0;
+        animation: underline 1s forwards;
+        animation-delay: 0.3s;
+    }
+    nav li {
+        transition: scale 0.3s;
+        cursor: pointer;
+    }
+    nav li:hover {
+        scale: 1.1;
+    }
+}
+
+@media (min-width: 992px) AND (max-width: 1200px)
+{
+    .navbar {
+        position: fixed;
+        background: transparent;
+        padding: 0 30px 0 30px;
+        transition: background 0.3s;
+        z-index: 11;
+    }
+    .navbar::after {
+        position: absolute;
+        bottom: 10px;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background-color: white;
+        margin: 0 20px;
+        content: '';
+    }
+    .header button:nth-child(odd) {
+        margin-right: 50px;
+    }
+    .nav-link {
+        position: relative;
+        font-size: 1.2rem;
+        transition: color 0.3s, border;
+    }
+    .active-menu {
+        color: gold !important;
+    }
+    .active-menu::before {
+        position: absolute;
+        content: '';
+        height: 1px;
+        background-color: black;
+        bottom: 0;
+        left: 0;
+        animation: underline 1s forwards;
+        animation-delay: 0.3s;
+    }
+    nav li {
+        transition: scale 0.3s;
+        cursor: pointer;
+    }
+    nav li:hover {
+        scale: 1.1;
+    }
+}
+@media (min-width: 768px) AND (max-width: 992px)
+{
+    .nav-link {
+        font-size: 1rem;
+        margin-top: 0;
+        color: black;
+        transition: color 0.3s;
+    }
+    .nav-link:hover{
+        color: gold;
+    }
+    .display{
+        display: none;
+    }
+    .nav-item:nth-child(1){
+        margin-top: 80px;
+    }
+    .header-title{
+        font-size: 2.2rem;
+        text-align: center;
+    }
+    .header button:nth-child(odd) {
+        margin-right: 50px;
+    }
+}
+@media (min-width: 576px) AND (max-width: 768px)
+{
+    .nav-link {
+        font-size: 1rem;
+        margin-top: 0;
+        color: black;
+        transition: color 0.3s;
+    }
+    .nav-link:hover{
+        color: gold;
+    }
+    .display{
+        display: none;
+    }
+    .nav-item:nth-child(1){
+        margin-top: 80px;
+    }
+    .header-title{
+        font-size: 2rem;
+        text-align: center;
+    }
+    .nav-link{
+        font-size: 1rem;
+        margin-top: 0;
+    }
+}
+@media (max-width: 576px)
+{
+    .nav-link {
+        font-size: 1rem;
+        margin-top: 0;
+        color: black;
+        transition: color 0.3s;
+    }
+    .nav-link:hover{
+        color: gold;
+    }
+    .display{
+        display: none;
+    }
+    .nav-item:nth-child(1){
+        margin-top: 80px;
+    }
+    .header-title{
+        font-size: 1.7rem;
+        text-align: center;
+    }
+    .buttons{
+        margin: 0;
+        text-align: center;
+    }
+    .header-btn{
+        margin: auto;
+        width: 90%;
+    }
+    .header-btn:nth-child(2){
+        margin-top: 20px;
+    }
+}
+
