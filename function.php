@@ -115,6 +115,5 @@ function make_pay
     $mysqli->query("UPDATE payments SET order_id = '".$order_id."' WHERE id = $payment_id");
     $mysqli->query("UPDATE cars SET avalible = 0 WHERE id=(SELECT car_id from payments WHERE id=$payment_id)");
     header('Location:'.$response->getResponse()->redirectUri); //You must redirect your client to PayU payment summary page.
-
 }
 ?>
