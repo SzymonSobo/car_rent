@@ -99,7 +99,7 @@ function make_pay
     $order['description'] = 'Car_Rent';
     $order['currencyCode'] = 'PLN';
     $order['totalAmount'] = $cost*100;
-    $order['extOrderId'] = 100; //must be unique!
+    $order['extOrderId'] = $payment_id; //must be unique!
     
     $order['products'][0]['name'] = $car_name;
     $order['products'][0]['unitPrice'] = $price;
